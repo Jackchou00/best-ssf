@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCM Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/numeric@1.2.6/numeric.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>CCM Generator</h1>
+        
+        <div class="controls">
+            <button id="runButton">Run 10,000 Iterations</button>
+            <button id="saveButton" disabled>Save Results</button>
+            <div id="status">Ready to start</div>
+        </div>
+        
+        <div class="results">
+            <div class="result-section">
+                <h2>CCM Matrix</h2>
+                <pre id="ccmMatrix">No results yet</pre>
+            </div>
+            
+            <div class="result-section">
+                <h2>Validation Results</h2>
+                <div id="validationResults">
+                    <p>Determinant: <span id="determinant">-</span></p>
+                    <p>Constraints Met: <span id="constraintsMet">-</span></p>
+                    <p>RGB Values: <span id="rgbValues">-</span></p>
+                    <p>RGB Equal: <span id="rgbEqual">-</span></p>
+                    <p>CCM Invertible: <span id="ccmInvertible">-</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="ssfChart"></canvas>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
